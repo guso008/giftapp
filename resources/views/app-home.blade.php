@@ -51,7 +51,7 @@
             color: white;
         @apply(--layout-horizontal);
         @apply(--layout-center-center);
-        @apply(--paper-font-display4);
+        @apply(--paper-font-display3);
         }
 
         neon-animatable:nth-child(1) {
@@ -116,10 +116,20 @@
                 REGALA
                 </br>
                 <paper-icon-button icon="expand-more" title="wake up" class="giant" on-click="_onDownClick"></paper-icon-button></neon-animatable>
-            <neon-animatable>2</neon-animatable>
-            <neon-animatable>3</neon-animatable>
-            <neon-animatable>4</neon-animatable>
-            <neon-animatable>5</neon-animatable>
+            <neon-animatable>
+                SUMATE YA!
+                </br>
+                <paper-icon-button icon="expand-more" title="wake up" class="giant" on-click="_onDownClick"></paper-icon-button></neon-animatable>
+            </neon-animatable>
+            <neon-animatable>EN REGALAR!
+                </br>
+                <paper-icon-button icon="expand-more" title="wake up" class="giant" on-click="_onDownClick"></paper-icon-button></neon-animatable></neon-animatable></neon-animatable>
+            <neon-animatable>LA NUEVA EXPERIENCIA
+                </br>
+                <paper-icon-button icon="expand-more" title="wake up" class="giant" on-click="_onDownClick"></paper-icon-button></neon-animatable></neon-animatable></neon-animatable>
+            <neon-animatable>MEJOR
+                </br>
+                <paper-icon-button icon="expand-more" title="wake up" class="giant" on-click="_onDownClick"></paper-icon-button></neon-animatable></neon-animatable>
         </neon-animated-pages>
         <div>
         Unete gratis.
