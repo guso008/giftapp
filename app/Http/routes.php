@@ -11,14 +11,14 @@
 |
 */
 
-//Route::get('/', function () {
-//    return view('welcome');
-//});
-
-
 Route::get('/', function () {
-    return view('gift.index');
+    return view('welcome');
 });
+
+
+//Route::get('/', function () {
+//    return view('gift.index');
+//});
 
 //Route::get('/', function () {
 //    return view('tasks.index');

@@ -38,7 +38,9 @@
 <body>
 <div class="container">
     <div class="content">
-        <div class="title">Laravel 5</div>
+        <div class="title">REGALA MEJOR</div>
+        <div class="title">La nueva experiencia en regalar!</div>
+        (SITIO EN CONSTRUCCION)
     </div>
 </div>
 </body>
