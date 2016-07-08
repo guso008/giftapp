@@ -1,4 +1,4 @@
 .env
 .idea
-/vendor
-/public/bower_components
+/vendor/*
+/public/bower_components/*
