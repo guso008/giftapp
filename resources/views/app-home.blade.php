@@ -23,6 +23,7 @@
     <link rel="import" href="bower_components/paper-styles/typography.html">
     <link rel="import" href="bower_components/paper-styles/color.html">
     <link rel="import" href="bower_components/paper-styles/default-theme.html">
+    <link rel="import" href="bower_components/paper-toolbar/paper-toolbar.html">
     <link rel="import" href="bower_components/neon-animation/neon-animated-pages.html">
     <link rel="import" href="bower_components/neon-animation/neon-animatable.html">
     <link rel="import" href="bower_components/neon-animation/neon-animations.html">
@@ -57,9 +58,15 @@
             @apply(--layout-flex);
         }
 
+        .column-right.container {
+            @apply(--layout-vertical);
+            @apply(--layout-flex);
+            @apply(--layout-center-justified);
+        }
+
         .text-home{
             @apply(--layout-vertical);
-            @apply(--layout-center);
+            @apply(--layout-center-center);
         }
 
         .container[flex-layout] {
@@ -112,6 +119,19 @@
             background: var(--paper-purple-500);
         }
 
+        paper-toolbar.white {
+            --paper-toolbar-background: white;
+        --paper-toolbar-title:{
+             text-align: right;
+             color: black;
+         @apply(--paper-font-menu);
+         };
+        }
+
+        paper-icon-button.black {
+            color: var(--paper-green-500);
+            --paper-icon-button-ink-color: var(--paper-indigo-500);
+        }
     </style>
 
 </head>
@@ -167,26 +187,32 @@
        COLUMN RIGHT - START
    =========================== -->
     <div class="column-right">
-        <div class="text-home">
-            <div class="paper-font-display1">Unete gratis.</div>
-            <div class="paper-font-display1">Haz muchos amigos.</div>
-            <div class="paper-font-display1">Comienza a regalar</div>
-            <div class="paper-font-display1">Y recibe tus mejores Regalos</div>
-        </div>
-        <div>
-            <div class="text-home signin">
-                <a tabindex="-1">
-                    <paper-button raised>Registrate ahora gratis
-                        <iron-icon icon="icons:arrow-drop-down"></iron-icon>
-                    </paper-button>
-                </a>
-                <!--<a class="btn action" ng-click="expand = true">Sign up now for free<i class="action-btn-icon"></i></a>
+        <paper-toolbar class="white">
+            <span class="title">Login</span>
+            <paper-icon-button icon="menu" class="black"></paper-icon-button>
+        </paper-toolbar>
+        <div class="column-right-container" style="margin-top: 20%">
+            <div class="text-home">
+                <div class="paper-font-display1">Unete gratis.</div>
+                <div class="paper-font-display1">Haz muchos amigos.</div>
+                <div class="paper-font-display1">Comienza a regalar</div>
+                <div class="paper-font-display1">Y recibe tus mejores Regalos</div>
+            </div>
+            <div>
+                <div class="text-home signin">
+                    <a tabindex="-1">
+                        <paper-button raised>Registrate ahora gratis
+                            <iron-icon icon="icons:arrow-drop-down"></iron-icon>
+                        </paper-button>
+                    </a>
+                    <!--<a class="btn action" ng-click="expand = true">Sign up now for free<i class="action-btn-icon"></i></a>
 
 
-                <a class="btn facebook" click-once="rightBar.loginFB(refferer.slug)" processing-text="Please wait...">Sign in with Facebook</a>
-                <a class="btn twitter" click-once="rightBar.loginTwitter(refferer.slug)" processing-text="Please wait...">Sign in with Twitter</a>
-                <a class="btn google" click-once="rightBar.loginGoogle(refferer.slug)" processing-text="Please wait...">Sign in with Google</a>
-                <a class="btn email" href="/login?s=1">Sign in with Email</a>-->
+                    <a class="btn facebook" click-once="rightBar.loginFB(refferer.slug)" processing-text="Please wait...">Sign in with Facebook</a>
+                    <a class="btn twitter" click-once="rightBar.loginTwitter(refferer.slug)" processing-text="Please wait...">Sign in with Twitter</a>
+                    <a class="btn google" click-once="rightBar.loginGoogle(refferer.slug)" processing-text="Please wait...">Sign in with Google</a>
+                    <a class="btn email" href="/login?s=1">Sign in with Email</a>-->
+                </div>
             </div>
         </div>
     </div>
