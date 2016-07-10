@@ -30,13 +30,11 @@
 
     <style is="custom-style">
         body{
-            overflow: hidden;
         @apply(--layout-fullbleed);
         @apply(--layout-horizontal);
         }
 
         .container {
-            overflow: hidden;
             @apply(--layout-fullbleed);
             @apply(--layout-vertival);
             @apply(--layout-flex);
@@ -75,14 +73,20 @@
             @apply(--layout-center-center);
         }
 
-
+        .paper-font-display2 {
+        @apply(--paper-font-display2);
+        }
 
         .paper-font-display1 {
         @apply(--paper-font-display1);
         }
 
-        .paper-font-display2 {
-        @apply(--paper-font-display2);
+        .paper-font-headline {
+        @apply(--paper-font-headline);
+        }
+
+        .paper-font-title {
+        @apply(--paper-font-title);
         }
 
         paper-icon-button.giant {
@@ -229,16 +233,26 @@
         <template is="dom-if" if="@{{wide}}">
             <paper-toolbar class="white">
                 <span class="title">Login</span>
-                <paper-icon-button icon="menu" class="black"></paper-icon-button>
+                <paper-icon-button icon="menu" class="black" on-click="_onHomeUser"></paper-icon-button>
             </paper-toolbar>
         </template>
         <div class="column-right-container" style="margin-top: 20%">
-            <div class="text-home">
-                <div class="paper-font-display1">Unete gratis.</div>
-                <div class="paper-font-display1">Haz muchos amigos.</div>
-                <div class="paper-font-display1">Comienza a regalar</div>
-                <div class="paper-font-display1">Y recibe tus mejores Regalos</div>
-            </div>
+            <template is="dom-if" if="@{{wide}}">
+                <div class="text-home paper-font-display1">
+                    <div>Unete gratis.</div>
+                    <div>Haz muchos amigos.</div>
+                    <div>Comienza a regalar</div>
+                    <div>Y recibe tus mejores Regalos</div>
+                </div>
+            </template>
+            <template is="dom-if" if="@{{!wide}}">
+                <div class="text-home paper-font-headline">
+                    <div>Unete gratis.</div>
+                    <div>Haz muchos amigos.</div>
+                    <div>Comienza a regalar</div>
+                    <div>Y recibe tus mejores Regalos</div>
+                </div>
+            </template>
             <div>
                 <div class="text-home signin">
                     <a tabindex="-1">
@@ -295,6 +309,10 @@
         this.entryAnimation = 'slide-from-bottom-animation';
         this.exitAnimation = 'slide-up-animation';
         this.selected = this.selected === 0 ? 4 : (this.selected - 1);
+    }
+
+    scope._onHomeUser = function () {
+        location.href="homeUser";
     }
 
 </script>

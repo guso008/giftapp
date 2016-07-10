@@ -32,6 +32,8 @@
     "paper-toolbar": "PolymerElements/paper-toolbar#^1.1.5",
     "paper-header-panel": "PolymerElements/paper-header-panel#^1.1.6",
     "iron-pages": "PolymerElements/iron-pages#^1.0.7",
-    "neon-animation": "PolymerElements/neon-animation#^1.2.3"
+    "neon-animation": "PolymerElements/neon-animation#^1.2.3",
+    "app-route": "PolymerElements/app-route#^0.9.2",
+    "app-layout": "PolymerElements/app-layout#^0.9.2"
   }
 }

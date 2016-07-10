@@ -15,9 +15,12 @@
 //    return view('welcome');
 //});
 
-
 Route::get('/', function () {
     return view('gift.index');
+});
+
+Route::get('/homeUser', function () {
+    return view('gift.homeUser');
 });
 
 //Route::get('/', function () {
