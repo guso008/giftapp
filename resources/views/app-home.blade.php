@@ -39,15 +39,21 @@
             overflow: hidden;
             @apply(--layout-fullbleed);
             @apply(--layout-vertival);
+            @apply(--layout-flex);
         }
 
-        .column-left[flex-layout]{
-            overflow: hidden;
+        .container[flex-layout] {
             @apply(--layout-fullbleed);
             @apply(--layout-horizontal);
+            @apply(--layout-flex-2);
         }
 
         .column-left {
+            overflow: hidden;
+            @apply(--layout-vertival);
+        }
+
+        .column-left[flex-layout]{
             overflow: hidden;
             @apply(--layout-fullbleed);
             @apply(--layout-horizontal);
@@ -69,11 +75,7 @@
             @apply(--layout-center-center);
         }
 
-        .container[flex-layout] {
-        @apply(--layout-fullbleed);
-        @apply(--layout-horizontal);
-        @apply(--layout-flex-2);
-        }
+
 
         .paper-font-display1 {
         @apply(--paper-font-display1);
@@ -132,6 +134,29 @@
             color: var(--paper-green-500);
             --paper-icon-button-ink-color: var(--paper-indigo-500);
         }
+
+
+        iron-pages {
+            width: 100%;
+            height: 200px;
+            font-size: 50px;
+            color: white;
+            text-align: center;
+        }
+        iron-pages div {
+            width: 100%;
+            height: 100%;
+            padding: 80px 0;
+        }
+        iron-pages div:nth-child(1) {
+            background-color: var(--google-blue-500);
+        }
+        iron-pages div:nth-child(2) {
+            background-color: var(--google-red-500);
+        }
+        iron-pages div:nth-child(3) {
+            background-color: var(--google-green-500);
+        }
     </style>
 
 </head>
@@ -144,41 +169,55 @@
     <!-- ==========================
        COLUMN LEFT - START
    =========================== -->
-    <div class="column-left" >
-        <neon-animated-pages id="pages" selected="[[selected]]" entry-animation="[[entryAnimation]]"
-                             exit-animation="[[exitAnimation]]" style="width:900px;">
-            <neon-animatable>
-                REGALA
-                </br>
-                <paper-icon-button icon="expand-more" title="wake up" class="giant"
-                                   on-click="_onDownClick"></paper-icon-button>
-            </neon-animatable>
-            <neon-animatable>
-                SUMATE YA!
-                </br>
-                <paper-icon-button icon="expand-more" title="wake up" class="giant"
-                                   on-click="_onDownClick"></paper-icon-button>
-            </neon-animatable>
-            </neon-animatable>
-            <neon-animatable>EN REGALAR!
-                </br>
-                <paper-icon-button icon="expand-more" title="wake up" class="giant"
-                                   on-click="_onDownClick"></paper-icon-button>
-            </neon-animatable>
-            </neon-animatable></neon-animatable>
-            <neon-animatable>LA NUEVA EXPERIENCIA
-                </br>
-                <paper-icon-button icon="expand-more" title="wake up" class="giant"
-                                   on-click="_onDownClick"></paper-icon-button>
-            </neon-animatable>
-            </neon-animatable></neon-animatable>
-            <neon-animatable>MEJOR
-                </br>
-                <paper-icon-button icon="expand-more" title="wake up" class="giant"
-                                   on-click="_onDownClick"></paper-icon-button>
-            </neon-animatable>
-            </neon-animatable>
-        </neon-animated-pages>
+    <div class="column-left" flex-layout$="@{{wide}}">
+        <template is="dom-if" if="@{{!wide}}">
+            <paper-toolbar class="white">
+                <span class="title">Login</span>
+                <paper-icon-button icon="menu" class="black"></paper-icon-button>
+            </paper-toolbar>
+            <iron-pages selected="0">
+                <div>Regala</div>
+                <div>Mejor</div>
+                <div>Unite Ya!</div>
+            </iron-pages>
+        </template>
+        <template is="dom-if" if="@{{wide}}">
+            <neon-animated-pages id="pages" selected="[[selected]]" entry-animation="[[entryAnimation]]"
+                                 exit-animation="[[exitAnimation]]" style="width:900px;">
+                <neon-animatable>
+                    REGALA
+                    </br>
+                    <paper-icon-button icon="expand-more" title="wake up" class="giant"
+                                       on-click="_onDownClick"></paper-icon-button>
+                </neon-animatable>
+                <neon-animatable>
+                    SUMATE YA!
+                    </br>
+                    <paper-icon-button icon="expand-more" title="wake up" class="giant"
+                                       on-click="_onDownClick"></paper-icon-button>
+                </neon-animatable>
+                </neon-animatable>
+                <neon-animatable>EN REGALAR!
+                    </br>
+                    <paper-icon-button icon="expand-more" title="wake up" class="giant"
+                                       on-click="_onDownClick"></paper-icon-button>
+                </neon-animatable>
+                </neon-animatable></neon-animatable>
+                <neon-animatable>LA NUEVA EXPERIENCIA
+                    </br>
+                    <paper-icon-button icon="expand-more" title="wake up" class="giant"
+                                       on-click="_onDownClick"></paper-icon-button>
+                </neon-animatable>
+                </neon-animatable></neon-animatable>
+                <neon-animatable>MEJOR
+                    </br>
+                    <paper-icon-button icon="expand-more" title="wake up" class="giant"
+                                       on-click="_onDownClick"></paper-icon-button>
+                </neon-animatable>
+                </neon-animatable>
+            </neon-animated-pages>
+        </template>
+
     </div>
     <!-- ==========================
     COLUMN LEFT - END
@@ -187,10 +226,12 @@
        COLUMN RIGHT - START
    =========================== -->
     <div class="column-right">
-        <paper-toolbar class="white">
-            <span class="title">Login</span>
-            <paper-icon-button icon="menu" class="black"></paper-icon-button>
-        </paper-toolbar>
+        <template is="dom-if" if="@{{wide}}">
+            <paper-toolbar class="white">
+                <span class="title">Login</span>
+                <paper-icon-button icon="menu" class="black"></paper-icon-button>
+            </paper-toolbar>
+        </template>
         <div class="column-right-container" style="margin-top: 20%">
             <div class="text-home">
                 <div class="paper-font-display1">Unete gratis.</div>
@@ -223,6 +264,11 @@
 </template>
 
 <script>
+
+    document.addEventListener('click', function(e) {
+        var pages = document.querySelector('iron-pages');
+        pages.selectNext();
+    });
 
     var scope = document.querySelector('template[is="dom-bind"]');
     scope.selected = 0;
