@@ -312,7 +312,7 @@
     }
 
     scope._onHomeUser = function () {
-        location.href="homeUser";
+        location.href="homeUserGift";
     }
 
 </script>

@@ -19,7 +19,7 @@
     <link rel="shortcut icon" sizes="32x32" href="/images/app-icon-32.png">
 
     <meta name="theme-color" content="#fff">
-    <link rel="manifest" href="/manifest.json">
+    <link rel="manifest" href="manifest.json">
 
     <script>
 

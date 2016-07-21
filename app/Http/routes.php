@@ -23,6 +23,14 @@ Route::get('/homeUser', function () {
     return view('gift.homeUser');
 });
 
+Route::get('/homeUserTest', function () {
+    return view('gift.homeUserTest');
+});
+
+Route::get('/homeUserGift', function () {
+    return view('gift.homeUserGift');
+});
+
 //Route::get('/', function () {
 //    return view('tasks.index');
 //});

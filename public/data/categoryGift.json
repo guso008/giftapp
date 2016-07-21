@@ -1,0 +1,72 @@
+[
+  {
+    "id": "1",
+    "name": "Gustos",
+    "count": "1032",
+    "imageUrl": "http://test.regalamejor.com/img/category/gustos.jpg",
+    "description": "Abundant in color, and healthy, delicious goodness, cooking with these South American purple potatoes is a treat. Boil, mash, bake, or roast them. For taste cook with chicken stock, and a dash of extra virgin olive oil."
+  },
+  {
+    "id": "2",
+    "name": "Hobbies",
+    "count": "958",
+    "imageUrl": "http://test.regalamejor.com/img/category/hobbies.jpg",
+    "description": "Abundant in color, and healthy, delicious goodness, cooking with these South American purple potatoes is a treat. Boil, mash, bake, or roast them. For taste cook with chicken stock, and a dash of extra virgin olive oil."
+  },
+  {
+    "id": "3",
+    "name": "Intereses",
+    "count": "725",
+    "imageUrl": "http://test.regalamejor.com/img/category/intereses.jpg",
+    "description": "This beautiful sprouts recipe is the most glorious side dish on a cold winter’s night. Construct it with bacon or fake-on, but always make sure the sprouts are deliciously seasoned and appropriately sautéed."
+  },
+  {
+    "id": "4",
+    "name": "Placeres",
+    "count": "302",
+    "imageUrl": "http://test.regalamejor.com/img/category/placeres.jpg",
+    "description": "This beautiful sprouts recipe is the most glorious side dish on a cold winter’s night. Construct it with bacon or fake-on, but always make sure the sprouts are deliciously seasoned and appropriately sautéed."
+  },
+  {
+    "id": "5",
+    "name": "Experiencias",
+    "count": "896",
+    "imageUrl": "http://test.regalamejor.com/img/category/experiencias.jpg",
+    "description": "Robust cuts of portuguese sausage add layers of flavour. Bake or fry until sausages are slightly browned and with a crispy skin. Serve warm and with cuts of pineapple for a delightful mix of sweet and savory flavour. This is the perfect dish after a swim in the sea."
+  },
+  {
+    "id": "6",
+    "name": "Viajes",
+    "count": "578",
+    "imageUrl": "http://test.regalamejor.com/img/category/viajes.jpg",
+    "description": "Crisp flavours and a bit of spice make this roasted chicken dish an easy go to when cooking for large groups. Top with Baja sauce for an extra kick of spice."
+  },
+  {
+    "id": "7",
+    "name": "Deportes",
+    "count": "365",
+    "imageUrl": "http://test.regalamejor.com/img/category/deportes.jpg",
+    "description": "This dish is a terrific pairing to almost any main. Bonus- it’s quick, easy to make, and turns even the simplest of dishes into a delicacy. Sweet coconut cream will leave your mouth watering, with yummy caramelized  flecks of rice adding an extra bit of taste. Fluff with fork before serving for best results."
+  },
+  {
+    "id": "8",
+    "name": "Acontecimientos",
+    "count": "357",
+    "imageUrl": "http://test.regalamejor.com/img/category/acontecimientos.jpg",
+    "description": "This mellow and herb filled blending of simple ingredients is easy enough to mix that a novice host will feel like a seasoned bartender. Top with crushed basil, shake or stir."
+  },
+  {
+    "id": "9",
+    "name": "Sorpresas",
+    "count": "578",
+    "imageUrl": "http://test.regalamejor.com/img/category/sopresas.jpg",
+    "description": "Cuts of fish like this are perfect for simple searing with bright flavours. Try Sesame seeds on these fillets for crusty skin filled with crunch. For added flavour try dipping in a homemade ponzu sauce - delicious."
+  },
+  {
+    "id": "10",
+    "name": "Lo Mas Votado",
+    "count": "865",
+    "imageUrl": "http://test.regalamejor.com/img/category/lomasvotado.jpg",
+    "description": "This tasty and healthy veggie is a favorite. Artichoke like this can be paired with a hearty main or works well as a small meal with some white wine on the side. Simple and fresh, all foodies love tasty artichoke."
+  }
+]

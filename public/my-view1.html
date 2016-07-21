@@ -7,11 +7,24 @@ The complete set of contributors may be found at http://polymer.github.io/CONTRI
 Code distributed by Google as part of the polymer project is also
 subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
 -->
-<link href="../bower_components/iron-icons/iron-icons.html" rel="import">
+<script src="../bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+
 <link rel="import" href="../bower_components/polymer/polymer.html">
-<link rel="import" href="../bower_components/paper-fab/paper-fab.html">
-<link rel="import" href="../bower_components/paper-input/paper-input.html">
-<link rel="import" href="../bower_components/paper-radio-group/paper-radio-group.html">
+
+<link rel="import" href="../bower_components/iron-collapse/iron-collapse.html">
+<link rel="import" href="../bower_components/iron-icons/iron-icons.html">
+<link rel="import" href="../bower_components/iron-icons/communication-icons.html">
+<link rel="import" href="../bower_components/iron-icons/hardware-icons.html">
+<link rel="import" href="../bower_components/iron-icons/social-icons.html">
+<link rel="import" href="../bower_components/iron-flex-layout/iron-flex-layout.html">
+<link rel="import" href="../bower_components/paper-button/paper-button.html">
+<link rel="import" href="../bower_components/paper-checkbox/paper-checkbox.html">
+<link rel="import" href="../bower_components/paper-icon-button/paper-icon-button.html">
+<link rel="import" href="../bower_components/paper-styles/color.html">
+<link rel="import" href="../bower_components/paper-styles/typography.html">
+<link rel="import" href="../bower_components/paper-card/paper-card.html">
+
+
 
 <dom-module id="my-view1">
 
@@ -46,19 +59,104 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         margin: 16px 0;
         color: #212121;
       }
+
+      .cyan {
+        background: var(--paper-cyan-500);
+      }
+
+      .horizontal {
+      @apply(--layout-horizontal);
+      }
+
+      paper-card.white {
+        --paper-card-header-color: #fff;
+
+      }
+
     </style>
 
-    <div class="card">
-      <div class="circle">1</div>
-      <h1>Comienza la experiencia de encontrar el mejor regalo!</h1>
-      <paper-input label="Edad:"></paper-input>
-      <label id="label1">Sexo:</label>
-      <paper-radio-group aria-labelledby="label1">
-        <paper-radio-button name="a">Mujer</paper-radio-button>
-        <paper-radio-button name="b">Hombre</paper-radio-button>
-        <paper-radio-button name="d">No requiere</paper-radio-button>
-      </paper-radio-group>
-      <paper-fab icon="arrow-forward" title="heart"></paper-fab>
+    <div class="horizontal">
+      <paper-card heading="GUSTOS" image="img/trip.png" class="white"  style="margin-bottom: 4px;">
+        <div class="card-content">Mas de 1000 regalos!</div>
+        <div class="card-actions">
+          <paper-button>Compatir</paper-button>
+          <paper-button>Explorar</paper-button>
+        </div>
+      </paper-card>
+      <paper-card heading="Top western road trips" image="img/cafe.png" class="white" style="margin-left:4px; margin-bottom: 4px;">
+        <div class="card-content">1,000 miles of wonder</div>
+        <div class="card-actions">
+          <paper-button>Share</paper-button>
+          <paper-button>Explore</paper-button>
+        </div>
+      </paper-card>
+    </div>
+    <div class="horizontal">
+      <paper-card heading="Top western road trips" image="img/donuts.png" class="white"  >
+        <div class="card-content">1,000 miles of wonder</div>
+        <div class="card-actions">
+          <paper-button>Share</paper-button>
+          <paper-button>Explore</paper-button>
+          <paper-icon-button icon="hardware:keyboard-arrow-up" title="more info" onclick="_toggle()" style="float:right; margin-bottom: 4px;">
+          </paper-icon-button>
+          <iron-collapse id="more-info" style="width:100%;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent enim ante, tempus eget volutpat ac, cursus ac ante. Nulla facilisi. Praesent sed lacinia ligula. Donec malesuada nisl eget quam iaculis, vel placerat justo cursus.
+          </iron-collapse>
+          <script>
+            function _toggle() {
+              var moreInfo = document.getElementById('more-info');
+              var iconButton = Polymer.dom(event).localTarget;
+              iconButton.icon = moreInfo.opened ? 'hardware:keyboard-arrow-up'
+                      : 'hardware:keyboard-arrow-down';
+              moreInfo.toggle();
+            }
+          </script>
+        </div>
+      </paper-card>
+      <paper-card heading="Top western road trips" image="img/travel.png" class="white" style="margin-left:4px; margin-bottom: 4px;">
+        <div class="card-content">1,000 miles of wonder</div>
+        <div class="card-actions">
+          <paper-button>Share</paper-button>
+          <paper-button>Explore</paper-button>
+          <paper-icon-button icon="hardware:keyboard-arrow-up" title="more info" onclick="_toggle()" style="float:right;">
+          </paper-icon-button>
+        </div>
+      </paper-card>
+    </div>
+    <div class="horizontal">
+      <paper-card heading="Top western road trips" image="img/trip.png" class="white"  >
+        <div class="card-content">1,000 miles of wonder</div>
+        <div class="card-actions">
+          <paper-button>Share</paper-button>
+          <paper-button>Explore</paper-button>
+          <paper-icon-button icon="hardware:keyboard-arrow-up" title="more info" onclick="_toggle()" style="float:right; margin-bottom: 4px;">
+          </paper-icon-button>
+          <iron-collapse id="more-info" style="width:100%;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent enim ante, tempus eget volutpat ac, cursus ac ante. Nulla facilisi. Praesent sed lacinia ligula. Donec malesuada nisl eget quam iaculis, vel placerat justo cursus.
+          </iron-collapse>
+          <script>
+            function _toggle() {
+              var moreInfo = document.getElementById('more-info');
+              var iconButton = Polymer.dom(event).localTarget;
+              iconButton.icon = moreInfo.opened ? 'hardware:keyboard-arrow-up'
+                      : 'hardware:keyboard-arrow-down';
+              moreInfo.toggle();
+            }
+          </script>
+        </div>
+      </paper-card>
+      <paper-card heading="Top western road trips" image="img/trip.png" class="white" style="margin-left:4px; margin-bottom: 4px;">
+        <div class="card-content">1,000 miles of wonder</div>
+        <div class="card-actions">
+          <paper-button>Share</paper-button>
+          <paper-button>Explore</paper-button>
+          <paper-icon-button icon="hardware:keyboard-arrow-up" title="more info" onclick="_toggle()" style="float:right;">
+          </paper-icon-button>
+          <iron-collapse id="more-info-1" style="width:100%;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent enim ante, tempus eget volutpat ac, cursus ac ante. Nulla facilisi. Praesent sed lacinia ligula. Donec malesuada nisl eget quam iaculis, vel placerat justo cursus.
+          </iron-collapse>
+        </div>
+      </paper-card>
     </div>
 
   </template>
