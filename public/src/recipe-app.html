@@ -111,9 +111,10 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
                   attr-for-selected="name"
                   on-iron-activate="_drawerSelected">
             <paper-item name="home">Home</paper-item>
-            <paper-item name="favorites">Favorites</paper-item>
-            <paper-item name="saved">Saved</paper-item>
-            <paper-item name="trending">Trending</paper-item>
+            <paper-item name="favorites">Favoritos</paper-item>
+            <paper-item name="saved">Guardados</paper-item>
+            <paper-item name="trending">Mis Regalos</paper-item>
+            <paper-item name="profile">Perfil</paper-item>
           </paper-listbox>
 
         </app-header-layout>
@@ -139,6 +140,10 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         </recipe-list>
 
         <recipe-list name="trending">
+          <paper-icon-button icon="app:menu" drawer-toggle></paper-icon-button>
+        </recipe-list>
+
+        <recipe-list name="profile">
           <paper-icon-button icon="app:menu" drawer-toggle></paper-icon-button>
         </recipe-list>
 
