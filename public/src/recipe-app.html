@@ -124,6 +124,10 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
               selected="[[_pageData.page]]"
               reset="[[_isDetailPage(_pageData.page)]]"></app-scrollpos-control>
 
+      <app-scrollpos-control
+              selected="[[_pageData.page]]"
+              reset="[[_isCategoryPage(_pageData.page)]]"></app-scrollpos-control>
+
       <!-- list/detail pages -->
       <iron-pages selected="[[_pageData.page]]" attr-for-selected="name">
 
@@ -152,6 +156,11 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
                 name="detail"
                 recipe="[[_getRecipe(recipes, _idData.id)]]"></recipe-detail>
 
+        <recipe-category
+                id="categoryView"
+                name="category"
+                recipe="[[_getCategory(categorys, _idData.id)]]"></recipe-category>
+
       </iron-pages>
 
     </app-drawer-layout>
@@ -178,6 +187,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       },
       _isDetailPage: function(page) {
         return page === 'detail';
+      },
+      _isCategoryPage: function(page) {
+        return page === 'category';
       },
       _getRecipe: function() {
         if (this.recipes && this._idData.id) {
