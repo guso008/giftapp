@@ -112,7 +112,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         <!-- main panel -->
         <app-header-layout>
 
-            <app-header id="header" effects="waterfall fade-background" reveals>
+            <app-header id="header" effects="waterfall fade-background" fixed reveals>
 
                 <!-- top toolbar -->
                 <app-toolbar>
@@ -120,8 +120,18 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
                     <a href="#/home" tabindex="-1">
                         <paper-icon-button icon="app:arrow-back"></paper-icon-button>
                     </a>
-
-                    <div main-title></div>
+                    <paper-menu-button horizontal-align="left" ignore-select>
+                        <paper-icon-button icon="app:menu" class="dropdown-trigger" alt="multi select"></paper-icon-button>
+                        <paper-listbox class="dropdown-content">
+                            <template is="dom-repeat" items="[[recipe.subcategory]]" multi>
+                                <paper-icon-item>
+                                    <iron-icon icon="app:chevron-right" item-icon></iron-icon>
+                                    {{item.name}}
+                                </paper-icon-item>
+                            </template>
+                        </paper-listbox>
+                    </paper-menu-button>
+                    <div main-title>{{recipe.count}} Regalos!</div>
 
                     <paper-menu-button horizontal-align="right">
                         <paper-icon-button icon="app:more-vert" class="dropdown-trigger" alt="menu"></paper-icon-button>
@@ -147,6 +157,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
                 </app-toolbar>
 
             </app-header>
+
 
             <div class="card-container">
 

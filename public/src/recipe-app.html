@@ -28,6 +28,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <link rel="import" href="../bower_components/app-layout/app-toolbar/app-toolbar.html">
 <link rel="import" href="../bower_components/app-layout/app-scrollpos-control/app-scrollpos-control.html">
 
+<link rel="import" href="recipe-category.html">
 <link rel="import" href="recipe-detail.html">
 <link rel="import" href="recipe-list.html">
 <link rel="import" href="app-icons.html">
@@ -82,7 +83,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             tail="{{_subRoute}}"></app-route>
     <app-route
             route="{{_subRoute}}"
-            pattern="category/:id"
+            pattern="/:id"
             data="{{_idData}}"></app-route>
     <app-route
             route="{{_subRoute}}"
